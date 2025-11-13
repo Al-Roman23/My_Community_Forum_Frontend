@@ -1,8 +1,59 @@
+/* Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Body Font */
 body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Tailwind Base & DaisyUI Plugin*/
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* DaisyUI Theme Customization */
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "myTheme";
+  default: true;
+
+  /* Primary color for buttons,
+    links,
+    highlights! */
+  --color-primary: #403f3f;
+  --color-primary-content: #ffffff;
+
+  /* Secondary accent color! */
+  --color-secondary: #d72050;
+  --color-secondary-content: #ffffff;
+
+  /* Base background colors! */
+  --color-base-100: #ffffff;
+  --color-base-200: #f3f3f3;
+  --color-base-300: #e7e7e7;
+
+  /* Accent or neutral tones! */
+  --color-accent: #706f6f;
+  --color-accent-content: #ffffff;
+
+  /* Info / Success / Warning / Error / Others*/
+  --color-info: #3abff8;
+  --color-info-content: #ffffff;
+  --color-success: #36d399;
+  --color-success-content: #ffffff;
+  --color-warning: #fbbd23;
+  --color-warning-content: #ffffff;
+  --color-error: #f87272;
+  --color-error-content: #ffffff;
+
+  /* Rounded corners! */
+  --radius-box: 0.5rem;
+  --radius-btn: 0.25rem;
+  --radius-badge: 1rem;
+}
+
+a.active {
+  @apply bg-base-300 text-primary font-semibold;
+}
