@@ -4,6 +4,10 @@ import axios from "axios";
 import CountdownTimer from "../../components/CountdownTimer";
 
 const UpcomingEvents = () => {
+  useEffect(() => {
+    console.log("API URL:", import.meta.env.VITE_API_URL);
+  }, []);
+
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filterType, setFilterType] = useState("");
@@ -131,9 +135,12 @@ const UpcomingEvents = () => {
               className="w-full border border-gray-300 dark:border-gray-600 rounded-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
             >
               <option value="">All Types</option>
-              <option value="Cleanup">Cleanup</option>
-              <option value="Plantation">Plantation</option>
-              <option value="Donation">Donation</option>
+              <option value="Cultural Parade">Cultural Parade</option>
+              <option value="Street Festival">Street Festival</option>
+              <option value="Heritage Festival">Heritage Festival</option>
+              <option value="Film Support">Film Support</option>
+              <option value="Music Festival">Music Festival</option>
+              <option value="National Celebration">National Celebration</option>
             </select>
           </div>
         </div>
